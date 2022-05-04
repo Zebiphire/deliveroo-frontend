@@ -1,38 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: #f2f5f5;
+}
+
 .App {
-  text-align: center;
+  background-color: #f2f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topBorderBottom {
+  border: #f2f5f5 1px solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  margin: 0 auto;
+  width: 96vw;
+  max-width: 1200px;
+  max-height: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.logoSize {
+  background-color: white;
+}
+
+.logoSvg {
+  height: 80px;
+  background-color: white;
+}
+
+.center {
+  background-color: #f2f5f5;
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 96vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.menus {
   display: flex;
   flex-direction: column;
+}
+
+.direction {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.h2Menus {
+  font-size: 26px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.h3Menu {
+  background-color: white;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: white;
+  border-radius: 15px;
+  width: 400px;
+  display: flex;
+  height: 160px;
+  padding: 5px;
+  margin: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.1s;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.leftItem {
+  background-color: white;
+}
+
+.itemDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 42px;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 8px;
+  color: #808484;
+  background-color: white;
+}
+
+.item > img {
+  width: 130px;
+  height: 130px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.item:hover {
+  box-shadow: 0 0 10px #333333;
+}
+
+.price {
+  color: #808484;
+  background-color: white;
+}
+
+.pictureItem {
+}
+
+/* Cart */
+
+.cart {
+  flex: 1;
+}
+
+.initCart {
+  width: 350px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.init {
+  background: white;
+  border-radius: 4px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: white;
+}
+
+.buttonValidate {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 1rem;
+  background: #00cdbd;
   color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonDisabled {
+  cursor: not-allowed;
+  background: #bac3c3;
+  color: #8b9a9b;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emptyCart {
+  color: #868a8a;
+  text-align: center;
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.cartContainer {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartItems {
+  border-bottom: 1px solid #d1d7d7;
+  margin: 0 10px;
+  max-height: calc(100vh - 300px);
+  overflow: auto;
+  background-color: white;
+}
+
+.cartResults {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #d1d7d7;
+  background-color: white;
+}
+
+.cartResultLine {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: white;
+}
+
+.cartResultLine span {
+  background-color: white;
+}
+
+.cartResultName {
+  flex: 1;
+  background-color: white;
+}
+
+.CartResultPrice {
+  width: 85px;
+  text-align: right;
+  background-color: white;
+}
+
+.resultsPrice {
+  background-color: white;
+}
+
+.cartTotal {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.3rem 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: white;
+}
+
+.cartLine {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  background-color: white;
+}
+
+.cartCounter {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: #808484;
+  background-color: white;
+}
+
+.cartCounter span {
+  min-width: 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+.cartItemName {
+  flex: 1;
+  background-color: white;
+}
+
+.CartItemPrice {
+  width: 85px;
+  text-align: right;
+  background-color: white;
+}
+
+.minusFAI {
+  color: #00cdbd;
+  font-size: small;
+  background-color: white;
+}
+
+.plusFAI {
+  color: #00cdbd;
+  font-size: small;
+  background-color: white;
 }
